@@ -1,6 +1,10 @@
-def words_count(file_name):
+
+import sys
+
+filename = sys.argv[1]
+def words_count(filename):
     """Count words in file."""
-    txt_file = open(file_name)
+    txt_file = open(filename)
     word_count = {}
 
     for line in txt_file:
@@ -16,4 +20,4 @@ def words_count(file_name):
 
     txt_file.close()
 
-words_count("twain.txt")
+words_count(filename)
